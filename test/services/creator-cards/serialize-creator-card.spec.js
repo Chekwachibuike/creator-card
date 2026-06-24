@@ -12,6 +12,7 @@ describe('services/creator-cards/serialize-creator-card', () => {
     created: 1767052800000,
     updated: 1767052800000,
     deleted: 0,
+    __v: 0,
   };
 
   it('maps _id to id and normalizes deleted: 0 to null', () => {
@@ -38,5 +39,11 @@ describe('services/creator-cards/serialize-creator-card', () => {
     const serialized = serializeCreatorCard(card, { includeAccessCode: false });
 
     expect(serialized).to.not.have.property('access_code');
+  });
+
+  it('strips the Mongoose __v version key', () => {
+    const serialized = serializeCreatorCard(card);
+
+    expect(serialized).to.not.have.property('__v');
   });
 });

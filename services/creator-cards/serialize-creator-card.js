@@ -1,5 +1,5 @@
 function serializeCreatorCard(card, { includeAccessCode = true } = {}) {
-  const { _id, deleted, access_code: accessCode, ...rest } = card;
+  const { _id, deleted, access_code: accessCode, __v, ...rest } = card;
   const serialized = {
     id: _id,
     ...rest,
