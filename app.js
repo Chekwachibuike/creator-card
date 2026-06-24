@@ -17,7 +17,7 @@ createQueue();
 
 const server = createServer({
   port: process.env.PORT,
-  JSONLimit: '150mb',
+  JSONLimit: '1mb',
   enableCors: true,
 });
 
