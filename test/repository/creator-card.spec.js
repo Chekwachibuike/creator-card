@@ -7,7 +7,7 @@ describe('repository/creator-card', () => {
     const card = await CreatorCardRepository.create({
       title: 'George Cooks',
       slug: 'george-cooks',
-      creator_reference: 'crt_8f2k1m9x4p7w3q5z01',
+      creator_reference: 'crt_8f2k1m9x4p7w3q5z',
       status: 'published',
       access_type: 'public',
     });
