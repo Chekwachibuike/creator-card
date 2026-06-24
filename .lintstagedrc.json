@@ -1,5 +1,5 @@
 {
-  "{endpoints,services,repository,messages,models,middlewares,workers}/**/*.{js,ts}": [
+  "{endpoints,services,repository,messages,models,middlewares,workers,test}/**/*.{js,ts}": [
       "prettier --write",
       "eslint --fix"
   ],
